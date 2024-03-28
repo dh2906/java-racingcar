@@ -5,6 +5,7 @@ public class RaceController {
         try {
             ArrayList<String> nameList = Name.inputName();
             int numOfAttempt = Attempt.inputAttempt();
+            Cars carList = new carList(nameList);
         }
 
         catch(IllegalArgumentException e) {
