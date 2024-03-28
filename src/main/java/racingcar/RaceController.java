@@ -4,6 +4,7 @@ public class RaceController {
     RaceController() {
         try {
             ArrayList<String> nameList = Name.inputName();
+            int numOfAttempt = Attempt.inputAttempt();
         }
 
         catch(IllegalArgumentException e) {
