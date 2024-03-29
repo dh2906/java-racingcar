@@ -7,15 +7,9 @@ public class RaceController {
     private int numOfAttempt;
     private Cars carList;
     RaceController() {
-        try {
-            nameList = Name.inputName();
-            numOfAttempt = Attempt.inputAttempt();
-            carList = new Cars(nameList);
-        }
-
-        catch(IllegalArgumentException e) {
-            System.out.println(e.getMessage());
-        }
+        nameList = Name.inputName();
+        numOfAttempt = Attempt.inputAttempt();
+        carList = new Cars(nameList);
     }
 
     public void raceStart() {

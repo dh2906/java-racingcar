@@ -6,6 +6,7 @@ public class Attempt {
     public static int inputAttempt() {
         System.out.println("시도 횟수를 입력해주세요.(자연수만)");
         String strAttempt = Console.readLine();
+        System.out.println(strAttempt);
         checkIsNum(strAttempt);
 
         return stringToInt(strAttempt);
