@@ -24,4 +24,20 @@ public class Cars {
     public void carGoForward(int idx) {
         carList.get(idx).goForward();
     }
+
+    public int max() {
+        int max = 0;
+
+        for(Car c : carList) {
+            max = c.compareToMax(max, c.getStat());
+        }
+
+        return max;
+    }
+
+    public String getWinnerName(int idx, int highScore) {
+        if(carList.get(idx).getStat() == highScore)
+            return carList.get(idx).getName();
+        return null;
+    }
 }

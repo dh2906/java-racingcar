@@ -21,4 +21,8 @@ public class Car {
         return stat;
     }
 
+    public int compareToMax(int a, int b) {
+        return Math.max(a, b);
+    }
+
 }
