@@ -9,21 +9,13 @@ public class Cars {
         }
     }
 
-    public String getName(int idx) {
-        return carList.get(idx).getName();
-    }
+    public String getName(int idx) { return carList.get(idx).getName(); }
 
-    public String printStat(int idx) {
-        return "-".repeat(carList.get(idx).getStat());
-    }
+    public String printStat(int idx) { return "-".repeat(carList.get(idx).getStat()); }
 
-    public int size() {
-        return carList.size();
-    }
+    public int size() { return carList.size(); }
 
-    public void carGoForward(int idx) {
-        carList.get(idx).goForward();
-    }
+    public void carGoForward(int idx) { carList.get(idx).goForward(); }
 
     public int max() {
         int max = 0;

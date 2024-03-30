@@ -48,6 +48,4 @@ public class Name {
             throw new IllegalArgumentException("[ERROR] 중복되는 이름 발견");
         }
     }
-
-
 }

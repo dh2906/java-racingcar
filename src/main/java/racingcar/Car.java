@@ -9,20 +9,8 @@ public class Car {
         this.stat = 0;
     }
 
-    public void goForward() {
-        stat++;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getStat() {
-        return stat;
-    }
-
-    public int compareToMax(int a, int b) {
-        return Math.max(a, b);
-    }
-
+    public void goForward() { stat++; }
+    public String getName() { return name; }
+    public int getStat() { return stat; }
+    public int compareToMax(int a, int b) { return Math.max(a, b); }
 }
