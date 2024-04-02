@@ -43,7 +43,7 @@ public class RaceController {
         ArrayList<String> winners = new ArrayList<>();
 
         for(int i = 0; i < carList.size(); i++) {
-            String name = carList.getWinnerName(i, max);
+            String name = carList.getMovedTheMostCar(i, max);
             if(name != null) winners.add(name);
         }
 
