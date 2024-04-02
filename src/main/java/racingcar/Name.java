@@ -34,6 +34,9 @@ public class Name {
     }
 
     public static void checkBlankInName(String name) {
+        if(name.isBlank())
+            throw new IllegalArgumentException("[ERROR] 이름에 공백 포함");
+
         if(name.length() != name.strip().length())
             throw new IllegalArgumentException("[ERROR] 이름에 공백 포함");
     }
