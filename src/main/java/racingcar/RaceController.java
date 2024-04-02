@@ -23,12 +23,12 @@ public class RaceController {
 
     public void choiceRandomNum() {
         for(int i = 0; i < carList.size(); i++)
-            carGoOrStop(i, Randoms.pickNumberInRange(0, 9));
+            goOrStopCar(i, Randoms.pickNumberInRange(0, 9));
     }
 
-    public void carGoOrStop(int idx, int rnd) {
+    public void goOrStopCar(int idx, int rnd) {
         if(rnd >= 4)
-            carList.carGoForward(idx);
+            carList.goForwardCar(idx);
     }
 
     public void printResult() {

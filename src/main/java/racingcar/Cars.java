@@ -15,7 +15,7 @@ public class Cars {
 
     public int size() { return carList.size(); }
 
-    public void carGoForward(int idx) { carList.get(idx).goForward(); }
+    public void goForwardCar(int idx) { carList.get(idx).goForward(); }
 
     public int max() {
         int max = 0;
