@@ -6,6 +6,9 @@ public class RaceController {
     private ArrayList<String> nameList;
     private int numOfAttempt;
     private Cars carList;
+    private String winnerNames;
+    private PrintController pController = new PrintController();
+
     RaceController() {
         nameList = Name.inputName();
         numOfAttempt = Attempt.inputAttempt();
@@ -15,10 +18,11 @@ public class RaceController {
     public void raceStart() {
         for(int i = 0; i < numOfAttempt; i++) {
             choiceRandomNum();
-            System.out.print((i+1) + " 라운드\n");
-            printResult();
-            System.out.println();
+            pController.printInterimResult(i+1, carList);
         }
+
+        winnerNames = getWhoIsWinner();
+        pController.printWinners(winnerNames);
     }
 
     public void choiceRandomNum() {
@@ -31,13 +35,6 @@ public class RaceController {
             carList.goForwardCar(idx);
     }
 
-    public void printResult() {
-        for(int i = 0; i < carList.size(); i++) {
-            System.out.print(carList.getName(i) + " : " + carList.printStat(i));
-            System.out.println();
-        }
-    }
-
     public String getWhoIsWinner() {
         int max = carList.max();
         ArrayList<String> winners = new ArrayList<>();
@@ -48,10 +45,5 @@ public class RaceController {
         }
 
         return String.join(",", winners);
-    }
-
-    public void printWinners() {
-        System.out.print("최종 우승자 : ");
-        System.out.println(getWhoIsWinner());
     }
 }
