@@ -1,8 +1,6 @@
 package racingcar;
 
-import camp.nextstep.edu.missionutils.Randoms;
-
-import java.util.ArrayList;
+import racingcar.unit.Cars;
 
 public class PrintController {
     public void printInterimResult(int round, Cars carList) {

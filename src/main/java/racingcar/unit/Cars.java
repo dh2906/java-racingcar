@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.unit;
 import java.util.ArrayList;
 
 public class Cars {

@@ -1,6 +1,9 @@
 package racingcar;
 import java.util.ArrayList;
 import camp.nextstep.edu.missionutils.Randoms;
+import racingcar.input.Attempt;
+import racingcar.input.Name;
+import racingcar.unit.Cars;
 
 public class RaceController {
     private int numOfAttempt;
