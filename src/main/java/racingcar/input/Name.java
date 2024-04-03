@@ -26,12 +26,12 @@ public class Name {
         checkNoCharInName(name);
     }
 
-    public static void checkOverLength(String name) {
+    private static void checkOverLength(String name) {
         if(name.length() > MAX_NAME_LENGTH)
             throw new IllegalArgumentException("[ERROR] 글자 수 초과");
     }
 
-    public static void checkBlankInName(String name) {
+    private static void checkBlankInName(String name) {
         if(name.isBlank())
             throw new IllegalArgumentException("[ERROR] 이름에 공백 포함");
 
@@ -39,7 +39,7 @@ public class Name {
             throw new IllegalArgumentException("[ERROR] 이름에 공백 포함");
     }
 
-    public static void checkNoCharInName(String name) {
+    private static void checkNoCharInName(String name) {
         if(!name.matches("^[a-zA-Z]*$"))
             throw new IllegalArgumentException("[ERROR] 이름에 알파벳이 아닌 문자 포함");
     }
