@@ -3,16 +3,14 @@ import java.util.ArrayList;
 import camp.nextstep.edu.missionutils.Randoms;
 
 public class RaceController {
-    private ArrayList<String> nameList;
     private int numOfAttempt;
     private Cars carList;
     private String winnerNames;
     private PrintController pController = new PrintController();
 
     RaceController() {
-        nameList = Name.inputName();
+        carList = new Cars(Name.inputName());;
         numOfAttempt = Attempt.inputAttempt();
-        carList = new Cars(nameList);
     }
 
     public void raceStart() {
