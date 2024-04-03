@@ -27,7 +27,7 @@ public class Cars {
         return max;
     }
 
-    public String getMovedTheMostCar(int idx, int highScore) {
+    public String getMostMovedCar(int idx, int highScore) {
         if(carList.get(idx).getStat() == highScore)
             return carList.get(idx).getName();
         return null;
