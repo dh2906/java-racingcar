@@ -8,7 +8,6 @@ import racingcar.unit.Cars;
 public class RaceController {
     private int numOfAttempt;
     private Cars carList;
-    private String winnerNames;
     private PrintController pController = new PrintController();
 
     public RaceController() {
@@ -22,8 +21,7 @@ public class RaceController {
             pController.printInterimResult(i+1, carList);
         }
 
-        winnerNames = getWhoIsWinner();
-        pController.printWinners(winnerNames);
+        pController.printWinners(getWhoIsWinner());
     }
 
     public void choiceRandomNum() {
