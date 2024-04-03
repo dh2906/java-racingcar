@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.controller;
 import java.util.ArrayList;
 import camp.nextstep.edu.missionutils.Randoms;
 import racingcar.input.Attempt;
