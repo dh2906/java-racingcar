@@ -11,7 +11,7 @@ public class RaceController {
     private String winnerNames;
     private PrintController pController = new PrintController();
 
-    RaceController() {
+    public RaceController() {
         carList = new Cars(Name.inputName());;
         numOfAttempt = Attempt.inputAttempt();
     }
