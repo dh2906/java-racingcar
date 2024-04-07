@@ -15,7 +15,7 @@ public class PrintController {
         );
     }
 
-    public void printWinners(String names) {
+    public void printWinnerNames(String names) {
         System.out.print("최종 우승자 : ");
         System.out.println(names);
     }

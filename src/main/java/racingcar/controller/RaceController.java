@@ -21,7 +21,7 @@ public class RaceController {
             pController.printInterimResult(i+1, carList);
         }
 
-        pController.printWinners(getWhoIsWinner());
+        pController.printWinnerNames(getWinnerNames());
     }
 
     public void choiceRandomNum() {
@@ -34,7 +34,7 @@ public class RaceController {
             carList.goForwardCar(idx);
     }
 
-    public String getWhoIsWinner() {
+    public String getWinnerNames() {
         int max = carList.max();
         ArrayList<String> winners = new ArrayList<>();
 
