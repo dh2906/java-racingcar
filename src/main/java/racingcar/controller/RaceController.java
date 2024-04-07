@@ -5,6 +5,7 @@ import racingcar.input.Name;
 import racingcar.unit.Cars;
 
 public class RaceController {
+    private final int FORWARD_CONDITION = 4;
     private int numOfAttempt;
     private Cars carList;
     private PrintController pController = new PrintController();
@@ -29,7 +30,7 @@ public class RaceController {
     }
 
     public void goOrStopCar(int idx, int rnd) {
-        if(rnd >= 4)
+        if(rnd >= FORWARD_CONDITION)
             carList.goForwardCar(idx);
     }
 
