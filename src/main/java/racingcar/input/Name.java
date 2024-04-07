@@ -1,7 +1,6 @@
 package racingcar.input;
 import camp.nextstep.edu.missionutils.Console;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Name {
     private static final int MAX_NAME_LENGTH = 5;

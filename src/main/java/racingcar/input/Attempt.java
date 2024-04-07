@@ -1,5 +1,4 @@
 package racingcar.input;
-
 import camp.nextstep.edu.missionutils.Console;
 
 public class Attempt {
