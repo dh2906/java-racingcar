@@ -10,10 +10,9 @@ public class PrintController {
     }
 
     public void printResult(Cars carList) {
-        for(int i = 0; i < carList.size(); i++) {
-            System.out.print(carList.getName(i) + " : " + carList.printStat(i));
-            System.out.println();
-        }
+        carList.stream().forEach(car ->
+                System.out.println(car.getName() + " : " + "-".repeat(car.getStat()))
+        );
     }
 
     public void printWinners(String names) {

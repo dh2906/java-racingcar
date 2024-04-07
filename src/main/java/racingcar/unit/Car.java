@@ -9,6 +9,12 @@ public class Car {
         this.stat = 0;
     }
 
+    public void printResult(Cars carList) {
+        carList.stream().forEach(car ->
+                System.out.println(car.getName() + " : " + "-".repeat(car.getStat()))
+        );
+    }
+
     public void goForward() { stat++; }
     public String getName() { return name; }
     public int getStat() { return stat; }

@@ -1,5 +1,6 @@
 package racingcar.unit;
 import java.util.ArrayList;
+import java.util.stream.Stream;
 
 public class Cars {
     private static ArrayList<Car> carList = new ArrayList<>();
@@ -13,6 +14,7 @@ public class Cars {
     public String printStat(int idx) { return "-".repeat(carList.get(idx).getStat()); }
     public int size() { return carList.size(); }
     public void goForwardCar(int idx) { carList.get(idx).goForward(); }
+    public Stream<Car> stream() { return carList.stream(); }
 
     public int max() {
         int max = 0;
