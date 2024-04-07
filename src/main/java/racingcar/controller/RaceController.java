@@ -34,15 +34,5 @@ public class RaceController {
             carList.goForwardCar(idx);
     }
 
-    public String getWinnerNames() {
-        int max = carList.max();
-        ArrayList<String> winners = new ArrayList<>();
-
-        for(int i = 0; i < carList.size(); i++) {
-            String name = carList.getMostMovedCar(i, max);
-            if(name != null) winners.add(name);
-        }
-
-        return String.join(",", winners);
-    }
+    public String getWinnerNames() { return carList.getMostMovedCarNames(); }
 }

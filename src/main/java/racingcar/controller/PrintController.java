@@ -10,7 +10,8 @@ public class PrintController {
     }
 
     public void printResult(Cars carList) {
-        carList.stream().forEach(car ->
+        carList.stream()
+                .forEach(car ->
                 System.out.println(car.getName() + " : " + "-".repeat(car.getStat()))
         );
     }
