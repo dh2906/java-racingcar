@@ -8,7 +8,7 @@ public class RaceController {
     private final int FORWARD_CONDITION = 4;
     private int numOfAttempt;
     private Cars carList;
-    private PrintController pController = new PrintController();
+    private PrintController printController = new PrintController();
 
     public RaceController() {
         carList = new Cars(Name.inputName());;
@@ -18,10 +18,10 @@ public class RaceController {
     public void raceStart() {
         for(int i = 0; i < numOfAttempt; i++) {
             choiceRandomNum();
-            pController.printInterimResult(i+1, carList);
+            printController.printInterimResult(i+1, carList);
         }
 
-        pController.printWinnerNames(getWinnerNames());
+        printController.printWinnerNames(getWinnerNames());
     }
 
     public void choiceRandomNum() {

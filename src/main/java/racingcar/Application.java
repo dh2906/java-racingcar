@@ -5,8 +5,8 @@ import racingcar.controller.RaceController;
 public class Application {
     public static void main(String[] args) {
         try {
-            RaceController rControl = new RaceController();
-            rControl.raceStart();
+            RaceController raceControl = new RaceController();
+            raceControl.raceStart();
         }
 
         catch(IllegalArgumentException e) {
