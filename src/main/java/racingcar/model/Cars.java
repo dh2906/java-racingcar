@@ -1,5 +1,7 @@
 package racingcar.model;
 
+import camp.nextstep.edu.missionutils.Randoms;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -7,11 +9,9 @@ import java.util.stream.Collectors;
 
 public class Cars {
     private final List<Car> carList;
-    private final Random random;
 
     public Cars() {
         carList = new ArrayList<>();
-        random = new Random();
     }
 
     public void join(Car car) {
@@ -20,7 +20,7 @@ public class Cars {
 
     public void tryToGo() {
         carList.forEach((car) ->
-                car.move(random.nextInt(10)));
+                car.move(Randoms.pickNumberInRange(0, 9)));
     }
 
     public List<Car> getCarList() {
