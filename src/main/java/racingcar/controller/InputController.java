@@ -1,11 +1,11 @@
 package racingcar.controller;
 
 import camp.nextstep.edu.missionutils.Console;
+import racingcar.util.NameParser;
 import racingcar.valid.NameValidation;
 import racingcar.valid.TryTimesValidation;
 import racingcar.view.InputView;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class InputController {
@@ -22,7 +22,7 @@ public class InputController {
     public List<String> inputCarNames() {
         inputView.printNamesInputView();
         String names = Console.readLine();
-        List<String> nameList = Arrays.stream(names.split(",", -1)).toList();
+        List<String> nameList = NameParser.parseName(names);
 
         nameList.forEach(nameValidation::validName);
 
