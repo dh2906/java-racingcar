@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.util;
 
 import racingcar.controller.InputController;
 import racingcar.controller.OutputController;
