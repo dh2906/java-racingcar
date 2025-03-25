@@ -1,6 +1,7 @@
 package racingcar.controller;
 
-import racingcar.valid.Validation;
+import racingcar.valid.NameValidation;
+import racingcar.valid.TryTimesValidation;
 import racingcar.view.InputView;
 
 import java.util.Arrays;
@@ -10,12 +11,14 @@ import java.util.Scanner;
 public class InputController {
     private final InputView inputView;
     private final Scanner sc;
-    private final Validation validation;
+    private final NameValidation nameValidation;
+    private final TryTimesValidation tryTimesValidation;
 
     public InputController() {
         inputView = new InputView();
         sc = new Scanner(System.in);
-        validation = new Validation();
+        nameValidation = new NameValidation();
+        tryTimesValidation = new TryTimesValidation();
     }
 
     public List<String> inputCarNames() {
@@ -23,7 +26,7 @@ public class InputController {
         String names = sc.nextLine();
         List<String> nameList = Arrays.stream(names.split(",", -1)).toList();
 
-        nameList.forEach(validation::validName);
+        nameList.forEach(nameValidation::validName);
 
         return nameList;
     }
@@ -33,7 +36,7 @@ public class InputController {
 
         String tryTimes = sc.nextLine();
 
-        validation.validTryTimes(tryTimes);
+        tryTimesValidation.validTryTimes(tryTimes);
 
         return Integer.parseInt(tryTimes);
     }
