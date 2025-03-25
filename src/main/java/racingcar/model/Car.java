@@ -3,6 +3,7 @@ package racingcar.model;
 public class Car {
     String name;
     int pos;
+    final int MOVABLE_CAR_NUMBER = 4;
 
     public Car(String name) {
         this.name = name;
@@ -10,7 +11,7 @@ public class Car {
     }
 
     public void move(int num) {
-        if (num >= 4)
+        if (num >= MOVABLE_CAR_NUMBER)
             pos++;
     }
 
