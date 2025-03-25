@@ -1,5 +1,6 @@
 package racingcar.controller;
 
+import camp.nextstep.edu.missionutils.Console;
 import racingcar.valid.NameValidation;
 import racingcar.valid.TryTimesValidation;
 import racingcar.view.InputView;
@@ -10,20 +11,18 @@ import java.util.Scanner;
 
 public class InputController {
     private final InputView inputView;
-    private final Scanner sc;
     private final NameValidation nameValidation;
     private final TryTimesValidation tryTimesValidation;
 
     public InputController() {
         inputView = new InputView();
-        sc = new Scanner(System.in);
         nameValidation = new NameValidation();
         tryTimesValidation = new TryTimesValidation();
     }
 
     public List<String> inputCarNames() {
         inputView.printNamesInputView();
-        String names = sc.nextLine();
+        String names = Console.readLine();
         List<String> nameList = Arrays.stream(names.split(",", -1)).toList();
 
         nameList.forEach(nameValidation::validName);
@@ -34,7 +33,7 @@ public class InputController {
     public int inputTryTimes() {
         inputView.printTryTimes();
 
-        String tryTimes = sc.nextLine();
+        String tryTimes = Console.readLine();
 
         tryTimesValidation.validTryTimes(tryTimes);
 
