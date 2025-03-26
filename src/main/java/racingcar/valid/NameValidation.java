@@ -1,5 +1,8 @@
 package racingcar.valid;
 
+import java.util.HashSet;
+import java.util.List;
+
 public class NameValidation {
     final int MAX_NAME_LENGTH = 5;
 
@@ -16,5 +19,10 @@ public class NameValidation {
     public void validNameLength(String name) {
         if (name.length() > MAX_NAME_LENGTH)
             throw new IllegalArgumentException("이름의 길이가 5자를 넘었습니다.");
+    }
+
+    public void validNameDuplicate(List<String> nameList) {
+        if (nameList.size() != new HashSet<String>(nameList).size())
+            throw new IllegalArgumentException("중복되는 이름이 입력되었습니다.");
     }
 }

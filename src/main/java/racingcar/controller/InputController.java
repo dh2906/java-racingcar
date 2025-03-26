@@ -25,6 +25,7 @@ public class InputController {
         List<String> nameList = NameParser.parseName(names);
 
         nameList.forEach(nameValidation::validName);
+        nameValidation.validNameDuplicate(nameList);
 
         return nameList;
     }
