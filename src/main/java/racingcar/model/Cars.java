@@ -22,10 +22,6 @@ public class Cars {
                 car.move(Randoms.pickNumberInRange(0, 9)));
     }
 
-    public List<Car> getCarList() {
-        return carList;
-    }
-
     public int getMaxPos() {
         return carList.stream().mapToInt(Car::getPos).max().getAsInt();
     }
