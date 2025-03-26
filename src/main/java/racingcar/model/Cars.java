@@ -34,8 +34,7 @@ public class Cars {
         ).collect(Collectors.toList());
     }
 
-    @Override
-    public String toString() {
-        return String.join("\n", carList.stream().map(Car::toString).toList()) + "\n";
+    public List<Car> getCarList() {
+        return carList;
     }
 }
