@@ -1,4 +1,4 @@
-package racingcar.util;
+package racingcar.handler;
 
 import racingcar.controller.InputController;
 import racingcar.controller.OutputController;
@@ -7,12 +7,12 @@ import racingcar.model.Cars;
 
 import java.util.List;
 
-public class RacingGame {
+public class GameHandler {
     private final Cars cars;
     private final InputController inputController;
     private final OutputController outputController;
 
-    public RacingGame() {
+    public GameHandler() {
         cars = new Cars();
         inputController = new InputController();
         outputController = new OutputController();
