@@ -31,8 +31,10 @@ public class Cars {
     }
 
     public List<Car> getWinners() {
+        int maxPos = getMaxPos();
+
         return carList.stream().filter(car ->
-            car.getPos() == getMaxPos()
+            car.getPos() == maxPos
         ).collect(Collectors.toList());
     }
 
