@@ -3,7 +3,7 @@ package racingcar.valid;
 public class TryTimesValidation {
     public void validTryTimes(String tryTimes) {
         validTryTimesIsInteger(tryTimes);
-        validTryTimesIsPositive(tryTimes);
+        validTryTimesIsZeroOrPositive(tryTimes);
     }
 
     public void validTryTimesIsInteger(String tryTimes) {
@@ -14,8 +14,8 @@ public class TryTimesValidation {
         }
     }
 
-    public void validTryTimesIsPositive(String tryTimes) {
-        if (Integer.parseInt(tryTimes) < 0)
-            throw new IllegalArgumentException("시도 횟수에 음수가 입력되었습니다.");
+    public void validTryTimesIsZeroOrPositive(String tryTimes) {
+        if (Integer.parseInt(tryTimes) <= 0)
+            throw new IllegalArgumentException("시도 횟수에 0이하의 정수가 입력되었습니다.");
     }
 }
