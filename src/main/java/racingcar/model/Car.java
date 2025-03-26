@@ -22,9 +22,4 @@ public class Car {
     public int getPos() {
         return pos;
     }
-
-    @Override
-    public String toString() {
-        return name + " : " + "-".repeat(getPos());
-    }
 }
