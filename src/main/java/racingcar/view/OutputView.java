@@ -11,7 +11,13 @@ public class OutputView {
     }
 
     public void printProgressResult(Cars cars) {
-        System.out.println(cars);
+        var carList = cars.getCarList();
+
+        carList.forEach((car) ->
+                System.out.printf("%s : %s \n", car.getName(), "-".repeat(car.getPos()))
+        );
+
+        System.out.println();
     }
 
     public void printWinners(List<Car> winners) {
