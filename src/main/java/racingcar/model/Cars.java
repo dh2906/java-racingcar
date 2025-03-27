@@ -23,7 +23,10 @@ public class Cars {
     }
 
     public int getMaxPos() {
-        return carList.stream().mapToInt(Car::getPos).max().getAsInt();
+        return carList.stream()
+                .mapToInt(Car::getPos)
+                .max()
+                .getAsInt();
     }
 
     public List<Car> getWinners() {
