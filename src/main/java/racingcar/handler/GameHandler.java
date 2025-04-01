@@ -30,9 +30,9 @@ public class GameHandler {
         List<String> nameList = inputController.inputCarNames();
         tryTimes = inputController.inputTryTimes();
 
-        nameList.forEach((name) -> {
-            cars.join(new Car(name));
-        });
+        nameList.forEach(name ->
+                cars.join(new Car(name))
+        );
     }
 
     public void progressResult() {

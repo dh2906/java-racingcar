@@ -18,8 +18,9 @@ public class Cars {
     }
 
     public void tryToGo() {
-        carList.forEach((car) ->
-                car.move(Randoms.pickNumberInRange(0, 9)));
+        carList.forEach(car ->
+                car.move(Randoms.pickNumberInRange(0, 9))
+        );
     }
 
 
