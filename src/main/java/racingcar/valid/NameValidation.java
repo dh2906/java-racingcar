@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.List;
 
 public class NameValidation {
-    final int MAX_NAME_LENGTH = 5;
+    private final int MAX_NAME_LENGTH = 5;
 
     public void validName(String name) {
         validNameIsNullOrBlank(name);

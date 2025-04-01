@@ -1,9 +1,9 @@
 package racingcar.model;
 
 public class Car {
-    String name;
-    int pos;
-    final int MOVABLE_CAR_NUMBER = 4;
+    private String name;
+    private int pos;
+    private final int MOVABLE_CAR_NUMBER = 4;
 
     public Car(String name) {
         this.name = name;
