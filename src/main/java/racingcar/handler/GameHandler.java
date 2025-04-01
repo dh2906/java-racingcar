@@ -4,6 +4,7 @@ import racingcar.controller.InputController;
 import racingcar.controller.OutputController;
 import racingcar.model.Car;
 import racingcar.model.Cars;
+import racingcar.util.WinnerFinder;
 
 import java.util.List;
 
@@ -44,7 +45,7 @@ public class GameHandler {
     }
 
     public void showWinners() {
-        List<Car> winners = cars.getWinners();
+        List<Car> winners = WinnerFinder.findWinners(cars);
 
         outputController.outputWinners(winners);
     }
