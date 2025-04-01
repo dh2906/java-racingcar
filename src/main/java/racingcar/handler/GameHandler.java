@@ -11,6 +11,7 @@ public class GameHandler {
     private final Cars cars;
     private final InputController inputController;
     private final OutputController outputController;
+    private int tryTimes;
 
     public GameHandler() {
         cars = new Cars();
@@ -19,23 +20,32 @@ public class GameHandler {
     }
 
     public void run() {
+        inputs();
+        progressResult();
+        showWinners();
+    }
+
+    public void inputs() {
         List<String> nameList = inputController.inputCarNames();
-        int tryTimes = inputController.inputTryTimes();
+        tryTimes = inputController.inputTryTimes();
 
         nameList.forEach((name) -> {
             cars.join(new Car(name));
         });
+    }
 
+    public void progressResult() {
         outputController.outputProgressResultTitle();
 
         for (int i = 0; i < tryTimes; i++) {
             cars.tryToGo();
             outputController.outputProgressResult(cars);
         }
+    }
 
+    public void showWinners() {
         List<Car> winners = cars.getWinners();
 
         outputController.outputWinners(winners);
-
     }
 }
